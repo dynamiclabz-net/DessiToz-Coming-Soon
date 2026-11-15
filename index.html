@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dessitoz | The crunch you didn't see coming</title>
+  <meta name="description" content="Dessitoz is launching soon. Protein-packed chips. Big flavours. A whole new way to snack.">
+  <meta name="theme-color" content="#130D0D">
+
+  <!-- IMAGE PATHS: every brand asset used on the page lives in assets/. Change the file names right here. -->
+  <link rel="icon" href="assets/dessitoz_logo.png" type="image/png">
+  <link rel="preload" as="image" href="assets/pagdi.png">
+
+  <!-- "js" class only exists when scripting runs, so the page never hides content without a way to reveal it -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- FONT: one family (Outfit). To swap it, change this link and --font in style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3: grid and utilities only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Cinematic backdrop: light beam, floor pool, vignette + grain (styled in style.css) -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__beam"></div>
+    <div class="bg__pool"></div>
+    <div class="bg__vignette"></div>
+  </div>
+
+  <main class="hero container-fluid">
+
+    <!-- ============ HEADER ============ -->
+    <header class="hero__header">
+      <a class="brand fade" href="#" aria-label="Dessitoz">
+        <img src="assets/dessitoz_wordmark.png" alt="Dessitoz" width="1653" height="695" class="brand__img">
+      </a>
+
+      <!-- <div class="pill fade" role="status">
+        <span class="pill__dot" aria-hidden="true"></span>
+        Launching soon
+      </div> -->
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <div class="row g-0 hero__body">
+
+      <!-- VISUAL: first on mobile, right side on desktop -->
+      <div class="col-md-5 order-1 order-md-2 stage-col">
+        <div class="stage">
+
+          <div class="pagdi-wrap">
+            <div class="stage__shadow" aria-hidden="true"></div>
+
+            <!-- Layers: drop (entrance) > float (idle motion) > parallax (mouse) -->
+            <div class="pagdi-drop">
+              <div class="pagdi-float">
+                <div class="pagdi-parallax">
+                  <img class="pagdi__bloom" src="assets/mascot.png" alt="" aria-hidden="true">
+                  <img class="pagdi__img" src="assets/mascot.png" alt="Dessitoz Pagdi, a colourful traditional turban" width="395" height="449" fetchpriority="high">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small diamonds echo the dots printed on the Pagdi -->
+          <span class="gem gem--teal" data-gem aria-hidden="true"></span>
+          <span class="gem gem--red" data-gem aria-hidden="true"></span>
+          <span class="gem gem--orange" data-gem aria-hidden="true"></span>
+          <span class="gem gem--gold" data-gem aria-hidden="true"></span>
+          <span class="gem gem--red2" data-gem aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- COPY: second on mobile, left side on desktop -->
+      <div class="col-md-7 order-2 order-md-1 copy-col">
+        <div class="copy">
+
+          <!-- HEADLINE: edit the three lines here. Wrap a word in <span class="accent"> for gold. -->
+          <h1 class="headline">
+            <span class="line"><span class="line__inner">The <span class="accent">crunch</span></span></span>
+            <span class="line"><span class="line__inner">you didn&apos;t</span></span>
+            <span class="line"><span class="line__inner">see coming.</span></span>
+          </h1>
+
+          <!-- SUPPORTING TEXT -->
+          <p class="support fade-up">
+            Protein-packed chips. Big flavours. A whole new way to snack.
+          </p>
+
+          <!-- ANNOUNCEMENT -->
+          <p class="coming" aria-label="Coming soon">Coming soon</p>
+
+          <!-- <p class="kicker fade-up">
+            <span class="kicker__line" aria-hidden="true"></span>
+            Get ready to snack differently.
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="hero__footer">
+      <div class="footer__line" aria-hidden="true"></div>
+
+      <!-- Mascot peeks up from behind the divider line -->
+      <!-- <div class="peek" aria-hidden="true">
+        <img class="peek__img" src="assets/pagdi.png" alt="" width="349" height="467">
+      </div> -->
+
+      <p class="footer__text fade-up">
+        <img class="footer__moustache" src="assets/moustache.png" alt="" width="435" height="190" aria-hidden="true">
+        Made for the love of crunch.
+      </p>
+    </footer>
+  </main>
+
+  <!-- GSAP: the only animation library -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
